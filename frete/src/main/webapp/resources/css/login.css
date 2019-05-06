@@ -1,0 +1,34 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25/05/2017, 01:08:53
+    Author     : DeividOliver
+*/
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@media (min-width: 641px) {
+.imagem{
+    background: url('resources/poseidon-layout/images/login/background-3.jpg') top left no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.texto{
+    font-family: 'Indie Flower', cursive;
+    color: #e5e5e5; 
+    text-shadow: 0px 0px 10px black;
+    padding-top: 15%; 
+    padding-left: 5%;
+    font-size: 2.286rem; 
+    font-style: italic;
+    display: block;
+}
+}
+@media (max-width: 640px) {
+    .texto{
+        display: none;
+    }
+}

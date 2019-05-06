@@ -1,0 +1,72 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+
+    <ui:define name="head">
+        <script src="../resources/js/valor.js" type="text/javascript"></script>
+    </ui:define>
+    <ui:define name="title">Planilha Atual</ui:define>
+    <ui:define name="viewname">Planilha Atual</ui:define>
+
+    <ui:define name="content">
+        <p:growl 
+            id="growl" 
+            showDetail="true" 
+            autoUpdate="true" />  
+
+        <div class="ui-fluid">
+            <div class="ui-g">
+                <div class="ui-g-12">
+                    <div class="card card-w-title">
+                        <h:form id="formGeral">
+                            <p:panel header="Planilha - ${planilhaBean.transportadora.razaoSocial}">
+                                <p:panelGrid 
+                                    id="pgCadastroProduto"
+                                    columns="1" 
+                                    columnClasses="ui-grid-col-12" 
+                                    layout="grid"
+                                    styleClass="ui-panelgrid-blank form-group" 
+                                    style="border:0px none; background-color:transparent; text-align: center">
+
+                                    <p:inputText id="valor-despacho" placeholder="Valor Despacho" 
+                                                 disabled="true"
+                                                 value="#{planilhaBean.planilha.valorDespascho}" 
+                                                 required="true">
+                                        <f:convertNumber currencyCode="BRL" type="currency" />
+                                    </p:inputText>
+
+
+                                    <p:inputText id="valor-quilometro"
+                                                 rendered="true"
+                                                 disabled="true"
+                                                 requiredMessage="Informe o valor por quilometro."
+                                                 placeholder="Valor Por Quilometro"
+                                                 value="#{planilhaBean.planilha.valorPadraoKilometro}" 
+                                                 maxlength="9">
+                                        <f:convertNumber currencyCode="BRL" type="currency" />
+                                    </p:inputText>
+
+                                    <p:inputText id="valor-gris"
+                                                 rendered="true"
+                                                 disabled="true"
+                                                 placeholder="Percentual Gris"
+                                                 value="#{planilhaBean.planilha.percentualCris}">
+                                    </p:inputText>
+
+                                    <p:inputText id="valor-frete" placeholder="Percentual Do Valor do Frete"
+                                                 disabled="true"
+                                                 rendered="true"
+                                                 value="#{planilhaBean.planilha.percentualValorFrete}">
+                                    </p:inputText>>
+                                </p:panelGrid>
+                            </p:panel>
+                        </h:form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>

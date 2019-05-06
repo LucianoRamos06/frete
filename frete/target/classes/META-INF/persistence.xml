@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="fretePU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>br.com.frete.entity.Usuario</class>
+    <class>br.com.frete.entity.Planilha</class>
+    <class>br.com.frete.entity.Orcamento</class>
+    <class>br.com.frete.entity.RegraDeTransporte</class>
+    <class>br.com.frete.entity.Generalidade</class>
+    <class>br.com.frete.entity.GeneralidadePlanilha</class>
+    <class>br.com.frete.entity.Transportadora</class>
+    <class>br.com.frete.entity.Telefone</class>
+    <class>br.com.frete.entity.Endereco</class>
+    <class>br.com.frete.entity.Participante</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/frete"/>
+      <property name="javax.persistence.jdbc.user" value="postgres"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="postgres"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect"/>
+      <property name="hibernate.connection.autocommit" value="true"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+    </properties>
+  </persistence-unit>
+</persistence>

@@ -1,0 +1,11 @@
+.pdf-icon {
+    background: url('imagem/pdf16.png') no-repeat !important; 
+    height:16px;
+    width:16px;
+}
+
+.xls-icon {
+    background: url('imagem/xls16.png') no-repeat !important; 
+    height:16px;
+    width:16px;
+}

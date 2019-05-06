@@ -1,0 +1,46 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans" 
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+
+    <http auto-config="true">
+        <intercept-url pattern="/usuario/**" access="ROLE_P, ROLE_T, ROLE_A" />
+        <intercept-url pattern="/transportadora/**" access="ROLE_T, ROLE_A" />
+        <intercept-url pattern="/participante/**" access="ROLE_P, ROLE_A" />        
+        <form-login 
+            login-page="/publico/login.xhtml"
+            authentication-success-handler-ref="myLoginHandler" 
+            authentication-failure-url = "/publico/login.xhtml?e=-1"/>
+        <access-denied-handler error-page="/acessoNegado.xhtml"/>
+        <logout invalidate-session="true"/>
+        <!--<remember-me token-validity-seconds="3600"/>-->
+        <session-management 
+            session-fixation-protection="newSession"
+            invalid-session-url="/publico/login.xhtml"/>
+    </http>
+    
+    <beans:bean 
+        id="myLoginHandler"
+        class="br.com.frete.spring.LoginHandler">
+    </beans:bean>
+    
+    <beans:bean 
+        id="passwordEncoder" 
+        class="org.springframework.security.authentication.encoding.ShaPasswordEncoder">
+        <beans:constructor-arg value="256"/>
+    </beans:bean>
+    <beans:bean 
+        id="myAuthenticationHandler" 
+        class="br.com.frete.spring.AuthenticationHandler"
+    />
+
+    <authentication-manager>
+        <authentication-provider ref="myAuthenticationHandler">
+      
+        </authentication-provider>
+    </authentication-manager>
+
+</beans:beans>

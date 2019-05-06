@@ -1,0 +1,26 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:pp="http://primefaces.org/poseidon">
+
+    <h:form id="menuform"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+        <div class="layout-menu-container">
+            <div class="nano">
+                <div class="nano-content menu-scroll-content">
+                    <pp:menu widgetVar="menu">
+                        <p:menuitem id="busca" value="Transportadoras" icon="fa fa-fw fa-search" outcome="#{menuBean.irListarTrasnportadoras()}"/>
+                        <p:menuitem id="planilha" value="Planilha" icon="fa fa-fw fa-comments" outcome="#{menuBean.irPlanilha()}" rendered="#{loginBean.transportadora}"/>
+                        <p:menuitem id="planilha-atual" value="Planilha Atual" icon="fa fa-fw fa-comments" outcome="#{menuBean.irPlanilhaAtual()}" rendered="#{loginBean.transportadora}"/>
+                        <p:menuitem id="minha_conta" value="Minha Conta" icon="fa fa-fw fa-search" outcome="#{menuBean.irDetalhesUsuario()}"/>
+                        <p:menuitem id="login" value="Login" icon="fa fa-fw fa-user" outcome="#{menuBean.irLogin()}"/>
+                    </pp:menu>
+                </div>
+            </div>
+        </div>
+    </h:form>
+</ui:composition>

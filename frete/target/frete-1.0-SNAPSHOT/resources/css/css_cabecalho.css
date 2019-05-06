@@ -1,0 +1,78 @@
+*, *:after, *:before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.menu{
+    margin-top: 50px;
+    background: #d7d6d6;
+
+}
+.menu-list{
+    margin-right: 110px;
+}
+.menu .menu-list, .menu .sub-menu{
+    list-style: none;
+}
+.menu a{ 
+    color: black;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing:0.2em;
+}
+.menu > .menu-list > li{
+    float: right;
+    position: relative;
+
+}
+.menu > .menu-list > li > a {
+    padding: 20px;
+    margin: 0 5px;
+    background: #d7d6d6;
+}
+.menu > .menu-list > li:hover a {
+    background: #444;
+    color: white;
+}
+.menu > .menu-list > li:hover > .sub-menu {
+    display: block;
+}
+.menu > .menu-list > li > .sub-menu {
+    position: absolute;
+    top: 50px;
+    left: 5px;
+    background: blue;
+    min-width: 200px;
+    z-index: 1000;
+    display: none;
+}
+.menu > .menu-list > li > .sub-menu > li > a {
+    padding: 10px 20px;
+}
+.menu:after {
+    content: '.';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.site-content{
+    padding: 20px;
+}
+h1{
+    font-size: 22px;
+    margin: 0 0 0.6em 0;
+    letter-spacing:0.2em;
+    color: #444;
+}
+p{
+    margin: 0 0 1.6em 0;
+}

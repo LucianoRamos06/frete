@@ -1,0 +1,51 @@
+.container-direito{
+    width: 50%;
+    float: right;
+}
+.container-esquerdo{
+    margin: auto;
+}
+
+.container-direito h2{
+    font-family: Franklin Gothic Medium;
+    font-size: 80px;
+    margin-bottom: -15px;
+    color: #909090;
+}
+.container-direito h3{
+    font-family: Franklin Gothic Medium;
+    font-size: 20px;
+    color: #909090;
+}
+
+.texto-diferente{
+    font-family: Franklin Gothic Medium;
+    font-size: 25px;
+    color: #efbe32;
+}
+.container-direito h1{
+    font-family: Franklin Gothic Medium;
+    font-size: 25px;
+}
+
+.container-esquerdo{
+    margin-top: 40px;
+    margin-left: 150px;
+}
+
+.menu-imagem{
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.body {
+    position: relative;
+    width: 100%;
+}
+
+.container-esquerdo{
+    right: 50%;
+    margin-right: -150px;
+    position: absolute;
+    transform: translateX(-50%);
+}

@@ -1,0 +1,119 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:po="http://primefaces.org/poseidon">
+
+    <h:form acceptcharset="UTF-8">
+
+        <div class="ui-g-12">
+            <p:inputText
+                id="nomeFantasia"
+                value="#{contaBean.transportadora.nomeFantasia}"
+                maxlength="150"
+                required="true"
+                requiredMessage="Informe o nome fantasia"
+                placeholder="Nome Fantasia"/>
+        </div>
+
+        <div class="ui-g-12">
+            <p:inputText
+                id="razaoSocial"
+                value="#{contaBean.transportadora.razaoSocial}"
+                maxlength="150"
+                required="true"
+                requiredMessage="Informe a razão social"
+                placeholder="Razão Social"/>
+        </div>
+
+        <div class="ui-g-12">
+            <p:inputMask
+                id="cnpj"
+                value="#{contaBean.transportadora.cnpj}"
+                mask="99.999.999/9999-99"
+                required="true"
+                size="25"
+                requiredMessage="Informe o CNPJl"
+                placeholder="CNPJ"/>
+        </div>
+
+        <div class="ui-g-12">
+            <p:inputMask
+                id="cep"
+                value="#{contaBean.cep}"
+                mask="99999-999"
+                required="true"
+                size="25"
+                requiredMessage="Informe o CEP"
+                placeholder="CEP"/>
+        </div>
+
+        <div class="ui-g-12">
+            <p:inputMask
+                id="fone"
+                value="#{contaBean.fone}"
+                mask="(99) 9 9999-9999"
+                required="true"
+                size="25"
+                requiredMessage="Informe o Telefone"
+                placeholder="Telefone"/>
+        </div>
+
+        <div class="ui-g-12">
+            <p:inputText
+                id="login"
+                value="#{contaBean.usuario.login}"
+                maxlength="150"
+                required="true"
+                requiredMessage="Informe seu username"
+                placeholder="Username"/>
+        </div>
+
+        <div class="ui-g-12">
+            <p:password
+                id="senha"
+                value="#{contaBean.usuario.senha}"
+                maxlength="150"
+                required="true"
+                inline="true"
+                promptLabel="Digite sua senha" 
+                weakLabel="Fraca"
+                goodLabel="Boa" 
+                strongLabel="Forte"
+                requiredMessage="Informe sua Senha"
+                placeholder="Senha"/>
+        </div>
+
+        <div class="ui-g-12">
+            <p:password
+                id="senhaConfirmacao"
+                value="#{contaBean.confirmarSenha}"
+                maxlength="150"
+                required="true"
+                inline="true"
+                requiredMessage="Confirme sua senha"
+                placeholder="Confirme sua senha"/>
+        </div>
+
+        <div class="ui-g-12 button-container">
+            <p:commandButton 
+                value="Criar Conta" 
+                icon="fa fa-user" 
+                action="#{contaBean.criarContaTransportadora()}"
+                ajax="false"
+                styleClass="green-btn"/>
+            <p:button 
+                value="Login"  
+                href="#{menuBean.irLogin()}"
+                icon="fa fa-user" 
+                styleClass="deep-purple-btn"/>
+            <p:button 
+                value="Listar Transportadoras"  
+                href="#{menuBean.irListarTrasnportadoras()}"
+                icon="fa fa-user" 
+                styleClass="green-btn"/>
+        </div>
+    </h:form>
+</ui:composition>

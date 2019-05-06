@@ -1,0 +1,101 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:po="http://primefaces.org/poseidon">
+
+    <h:form acceptcharset="UTF-8">
+        <div class="ui-g-12">
+            <p:inputText
+                id="nome"
+                value="#{contaBean.participante.nome}"
+                maxlength="200"
+                required="true"
+                requiredMessage="Informe seu nome"
+                placeholder="Nome"/>
+        </div>
+
+        <div class="ui-g-12">
+            <p:selectOneMenu 
+                id="sexo" 
+                value="#{contaBean.participante.sexo}" 
+                required="true"
+                requiredMessage="Informe o seu perfil"
+                style="margin-bottom:10px;">
+                <f:selectItem itemLabel="Sexo" itemValue="" noSelectionOption="true"/>
+                <f:selectItem itemLabel="Masculino" itemValue="M" />
+                <f:selectItem itemLabel="Feminino" itemValue="F" />
+            </p:selectOneMenu>
+        </div>
+
+        <div class="ui-g-12">
+            <p:inputMask
+                id="cnpj"
+                value="#{contaBean.participante.cpf}"
+                mask="999.999.999-99"
+                required="true"
+                size="25"
+                requiredMessage="Informe o CPF"
+                placeholder="CPF"/>
+        </div>
+        
+        <div class="ui-g-12">
+            <p:inputText
+                id="login"
+                value="#{contaBean.usuario.login}"
+                maxlength="150"
+                required="true"
+                requiredMessage="Informe seu Username"
+                placeholder="Username"/>
+        </div>
+
+        <div class="ui-g-12">
+            <p:password
+                id="senha"
+                value="#{contaBean.usuario.senha}"
+                maxlength="150"
+                required="true"
+                inline="true"
+                promptLabel="Digite sua senha" 
+                weakLabel="Fraca"
+                goodLabel="Boa" 
+                strongLabel="Forte"
+                requiredMessage="Informe sua Senha"
+                placeholder="Senha"/>
+        </div>
+
+        <div class="ui-g-12">
+            <p:password
+                id="senhaConfirmacao"
+                value="#{contaBean.confirmarSenha}"
+                maxlength="150"
+                required="true"
+                inline="true"
+                requiredMessage="Confirme sua senha"
+                placeholder="Confirme sua senha"/>
+        </div>
+
+
+        <div class="ui-g-12 button-container">
+            <p:commandButton 
+                value="Criar Conta" 
+                icon="fa fa-user" 
+                action="#{contaBean.criarContaParticipante()}"
+                ajax="false"
+                styleClass="green-btn"/>
+            <p:button 
+                value="Login" 
+                href="#{menuBean.irLogin()}"
+                icon="fa fa-user" 
+                styleClass="deep-purple-btn"/>
+            
+            <p:button 
+                value="Listar Transportadoras"  
+                href="#{menuBean.irListarTrasnportadoras()}"
+                icon="fa fa-user" 
+                styleClass="green-btn"/>
+        </div>
+    </h:form>
+</ui:composition>

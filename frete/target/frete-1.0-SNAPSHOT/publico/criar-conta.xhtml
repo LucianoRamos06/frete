@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <h:head>
+        <f:facet name="first">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <link rel="icon" type="image/png" href="favicon.ico"/>
+            <link href="../resources/css/animate.css" rel="stylesheet" type="text/css"/>
+            <link href="../resources/css/login.css" rel="stylesheet" type="text/css"/>
+        </f:facet>
+        <title>Criar Conta - Frete Fácil</title>
+    </h:head> 
+
+    <h:body  style="max-height: 90%" styleClass="imagem login-body">
+        <p:growl id="growl" showDetail="true"/>
+
+        <h1 style="color: white" class="texto animated fadeInLeft">Frete Fácil <br/>Encontre o melhor preco!.</h1>
+
+        <div class="login-panel ui-fluid animated fadeInRight" style="padding-top: 0px">
+            <div class="ui-g">
+                <div class="ui-g-12 logo-container" style="padding-bottom: 0px">
+                    <img src="resources/images/login/logo.png" height="90px" alt=""/>
+                </div>
+                <h:form id="forCadastro">
+                    <div class="ui-g-12">
+                        <p:selectOneMenu 
+                            id="sexo" 
+                            value="#{contaBean.tipoConta}" 
+                            required="true"
+                            requiredMessage="Informe o seu perfil"
+                            style="margin-bottom:10px;">
+                            <f:selectItem itemLabel="Participante" itemValue="P" />
+                            <f:selectItem itemLabel="Transportadora" itemValue="T" />
+                            <p:ajax event="itemSelect" listener="#{contaBean.tipoFormulario()}" update="forCadastro" />
+                        </p:selectOneMenu>
+                    </div>
+                    <ui:include src="#{contaBean.include}"/>
+                </h:form>
+
+            </div>
+        </div>
+
+        <h:outputStylesheet name="css/layout-#{guestPreferences.theme}.css" library="poseidon-layout" />
+    </h:body>
+    <style>
+        @media (min-width: 641px) {
+            .imagem{
+                background: url('../resources/poseidon-layout/images/login/caminhao.jpg') top left no-repeat;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+
+            }
+        }
+    </style>
+
+</html>

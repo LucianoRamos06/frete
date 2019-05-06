@@ -1,0 +1,51 @@
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:po="http://primefaces.org/poseidon">
+    <div class="topbar clearfix">
+        <div class="topbar-left">            
+            <div class="logo"></div>
+        </div>
+
+        <div class="topbar-right">
+            <a id="menu-button" href="#">
+                <i class="fa fa-angle-left"></i>
+            </a>
+
+            <a id="topbar-menu-button" href="#">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul class="topbar-items fadeInDown animated">
+
+                <li class="profile-item">
+                    <a href="#">                            
+                        <!--<div class="profile-image"></div>-->
+                        <p:graphicImage id="giFotoNaoDisponivel" 
+                                        name="images/foto-nao-disponivel.png" 
+                                        library="poseidon-layout" 
+                                        height="36" 
+                                        width="36" 
+                                        style="float: left; border-radius: 50px"/>
+                        <span class="topbar-item-name" 
+                              style="padding-top: 3%">
+                           <!--apelido-->
+                        </span>
+                    </a>
+
+                    <ul class="poseidon-menu animated">
+                        <li role="menuitem">
+                            <a href="#{request.contextPath}/j_spring_security_logout">
+                                <i class="fa fa-fw fa-power-off"></i>
+                                <span>Sair</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</ui:composition>

@@ -1,0 +1,57 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+
+    <ui:define name="title">Transportadoras</ui:define>
+    <ui:define name="viewname">Transportadoras</ui:define>
+    <ui:define name="content">
+        <p:growl id="growl" showDetail="true" showSummary="true" /> 
+        <div class="ui-g ui-fluid">
+            <div class="ui-g-12">
+                <div class="card card-w-title" style="min-height: 420px">
+                    <p:dataGrid var="transportadora" value="#{transportadoraBean.trasponortadoras}" 
+                                columns="4" 
+                                layout="grid"
+                                rows="12" 
+                                paginator="true" 
+                                id="produto"
+                                paginatorPosition="bottom"
+                                rowsPerPageTemplate="6,12,16">
+
+                        <f:facet name="header">
+                            Transportadoras
+                        </f:facet>
+                        <p:panel header="#{transportadora.nomeFantasia}" style="text-align:center">
+                            <a href="#" title="Visualizar instituição">
+                                <h:panelGrid columns="1" style="width:100%">
+                                    <p:graphicImage 
+                                        id="giFotoPerfil1"
+                                        rendered="#{transportadora.foto != null}" 
+                                        value="/transportadora/logomarcas/#{instituicao.logomarca}" 
+                                        width="180"
+                                        height="180"/>
+                                    <p:graphicImage 
+                                        id="giFotoPerfil" 
+                                        rendered="#{transportadora.foto==null}" 
+                                        name="images/foto-nao-disponivel.png" 
+                                        library="poseidon-layout" 
+                                        height="180"
+                                        width="180"/>
+
+                                    <p:button id="btn-calcular"
+                                              value="Acessar" 
+                                              icon="fa fa-user" 
+                                              styleClass="turquoise-btn"
+                                              href="#{menuBean.irCalculadora()}?transportadora=#{transportadora.id}"/>
+                                </h:panelGrid>
+                            </a>
+                        </p:panel>
+                    </p:dataGrid>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>

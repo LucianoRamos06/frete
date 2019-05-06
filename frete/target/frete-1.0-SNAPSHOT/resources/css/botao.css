@@ -1,0 +1,86 @@
+.OrangeButton {box-shadow: inset 0 0 0 1px #DBB626; border: solid 1px #876C17; text-shadow: 0 -1px 0 #7B6308;
+                         /*height: 150px;*/
+                         background: #c99f15;
+                         background: -moz-linear-gradient(top, #c99f15 0%, #b1900b 100%);
+                         background: -webkit-gradient(left top, left bottom, color-stop(0%, #c99f15), color-stop(100%, #b1900b));
+                         background: -webkit-linear-gradient(top, #c99f15 0%, #b1900b 100%);
+                         background: -o-linear-gradient(top, #c99f15 0%, #b1900b 100%);
+                         background: -ms-linear-gradient(top, #c99f15 0%, #b1900b 100%);
+                         background: linear-gradient(to bottom, #c99f15 0%, #b1900b 100%);
+                         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c99f15', endColorstr='#b1900b', GradientType=0 );}
+.OrangeButton:hover .ui-button-text{color:#ffffff !important;
+                                                                         background: #b1900b;
+                                                                         background: -moz-linear-gradient(top, #b1900b 0%, #c99f15 100%);
+                                                                         background: -webkit-gradient(left top, left bottom, color-stop(0%, #b1900b), color-stop(100%, #c99f15));
+                                                                         background: -webkit-linear-gradient(top, #b1900b 0%, #c99f15 100%);
+                                                                         background: -o-linear-gradient(top, #b1900b 0%, #c99f15 100%);
+                                                                         background: -ms-linear-gradient(top, #b1900b 0%, #c99f15 100%);
+                                                                         background: linear-gradient(to bottom, #b1900b 0%, #c99f15 100%);
+                                                                         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b1900b', endColorstr='#c99f15', GradientType=0 );}
+
+/*.GreenButton .ui-button-text{box-shadow: inset 0 0 0 1px #54DB26; border: solid 1px #2B8717; text-shadow: 0 -1px 0 #18840B;
+                             height: 50px;
+                             background: #2dc915;
+                             background: -moz-linear-gradient(top, #2dc915 0%, #0bb113 100%);
+                             background: -webkit-gradient(left top, left bottom, color-stop(0%, #2dc915), color-stop(100%, #0bb113));
+                             background: -webkit-linear-gradient(top, #2dc915 0%, #0bb113 100%);
+                             background: -o-linear-gradient(top, #2dc915 0%, #0bb113 100%);
+                             background: -ms-linear-gradient(top, #2dc915 0%, #0bb113 100%);
+                             background: linear-gradient(to bottom, #2dc915 0%, #0bb113 100%);
+                             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2dc915', endColorstr='#0bb113', GradientType=0 );}*/
+.GreenButton:hover .ui-button-text, .GreenButton:focus .ui-button-text{color:#ffffff !important;
+                    /*height: 50px;*/
+                    background: #0bb113;
+                    background: -moz-linear-gradient(top, #0bb113 0%, #2dc915 100%);
+                    background: -webkit-gradient(left top, left bottom, color-stop(0%, #0bb113), color-stop(100%, #2dc915));
+                    background: -webkit-linear-gradient(top, #0bb113 0%, #2dc915 100%);
+                    background: -o-linear-gradient(top, #0bb113 0%, #2dc915 100%);
+                    background: -ms-linear-gradient(top, #0bb113 0%, #2dc915 100%);
+                    background: linear-gradient(to bottom, #0bb113 0%, #2dc915 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0bb113', endColorstr='#2dc915', GradientType=0 );}
+
+/*.RedButton .ui-button-text{box-shadow: inset 0 0 0 1px #F23030; border: solid 1px #871717; text-shadow: 0 -1px 0 #670606;
+                           background: #c91515;
+                           background: -moz-linear-gradient(top, #c91515 0%, #b10b0b 100%);
+                           background: -webkit-gradient(left top, left bottom, color-stop(0%, #c91515), color-stop(100%, #b10b0b));
+                           background: -webkit-linear-gradient(top, #c91515 0%, #b10b0b 100%);
+                           background: -o-linear-gradient(top, #c91515 0%, #b10b0b 100%);
+                           background: -ms-linear-gradient(top, #c91515 0%, #b10b0b 100%);
+                           background: linear-gradient(to bottom, #c91515 0%, #b10b0b 100%);
+                           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c91515', endColorstr='#b10b0b', GradientType=0 );}*/
+.RedButton:hover .ui-button-text, .RedButton:focus .ui-button-text{color:#ffffff !important;
+                  background: #b10b0b;
+                  background: -moz-linear-gradient(top, #b10b0b 0%, #c91515 100%);
+                  background: -webkit-gradient(left top, left bottom, color-stop(0%, #b10b0b), color-stop(100%, #c91515));
+                  background: -webkit-linear-gradient(top, #b10b0b 0%, #c91515 100%);
+                  background: -o-linear-gradient(top, #b10b0b 0%, #c91515 100%);
+                  background: -ms-linear-gradient(top, #b10b0b 0%, #c91515 100%);
+                  background: linear-gradient(to bottom, #b10b0b 0%, #c91515 100%);
+                  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b10b0b', endColorstr='#c91515', GradientType=0 );}
+
+.gray{color:#5A5A5A;}
+.softgray{color:#909090;}
+.yellow{color:#FFD100;}
+.white{ color:#ffffff;}
+.red{color:#e90c45;}
+.orange{color:#F15A29;}
+.softblue{color:#C1E1F4;}
+.hardblue{color:#27AAE1;}
+.hardblack{color:#000000;}
+.leaden{color:#72828B;}
+
+/* background colors */
+.white-back{ background-color:#ffffff;}
+.red-back{ background-color:#EF3C56;}
+.gray-back{background-color:#F7F7F7;}
+.leaden-back{background-color: #FBFCFD;}
+.orange-back{ background-color:#F15A29;}
+
+/* background colors */
+.softBrownBack{background-color:#DBD0BD;}
+.softGreenBack{background-color:#8BD8B1;}
+.softOrangeBack{background-color:#F9BB70;}
+.softYellowBack{background-color:#FFE771;}
+.softRedBack{background-color:#EF7F88;}
+.softBlueBack{background-color:#6BCCED;}
+.softGrayBack{background-color:#F2F2F2;}

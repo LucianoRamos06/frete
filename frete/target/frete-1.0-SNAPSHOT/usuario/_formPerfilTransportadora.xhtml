@@ -1,0 +1,26 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <h:form acceptcharset="UTF-8">
+        <p:panelGrid 
+            id="pgTransportadora"
+            columns="2" 
+            columnClasses="ui-grid-col-5, ui-grid-col-7" 
+            styleClass="form-group">
+
+            <p:outputLabel value="Razao Social"/>
+            <p:inputText disabled="true" value="#{usuarioBean.transportadora.razaoSocial}"/>
+
+            <p:outputLabel value="Nome Fantasia"/>
+            <p:inputText disabled="true" value="#{usuarioBean.transportadora.nomeFantasia}"/>
+
+            <p:outputLabel value="CNPJ"/>
+            <p:inputMask mask="99.999.999/9999-99"
+                         disabled="true"
+                         value="#{usuarioBean.transportadora.cnpj}" />
+        </p:panelGrid>
+    </h:form>
+
+</ui:composition>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        View Desktop
+        <style type="text/css">
+            .sub-header {
+                border-bottom: 1px solid #eee;
+                padding-bottom: 10px;
+            }
+            .navbar-fixed-top {
+                border: 0 none;
+            }
+            @media (max-width: 767px) {
+                .sidebarMobile {
+                    display: block;
+                }
+                .sidebar {
+                    display: none;
+                }
+            }
+
+
+            @media (min-width: 768px) {
+                .sidebar {
+                    background-color: #f5f5f5;
+                    border-right: 1px solid #eee;
+                    bottom: 0;
+                    display: block;
+                    left: 0;
+                    padding: 20px;
+                    position: fixed;
+                    top: 51px;
+                    z-index: 1000;
+
+                }
+
+                .sidebarMobile {
+                    display: none;
+                }
+
+                .barraRolagem{
+                    overflow-x: hidden;
+                    overflow-y: auto ;
+                }
+            }
+            .nav-list {
+                margin-bottom: 20px;
+                margin-left: -20px;
+                margin-right: -21px;
+            }
+            .nav-list > li > a {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .nav-list > .active > a, .nav-sidebar > .active > a:hover, .nav-sidebar > .active > a:focus {
+                background-color: #428bca;
+                color: #fff;
+            }
+            .main {
+                padding: 20px;
+            }
+            @media (min-width: 768px) {
+                .main {
+                    padding-left: 40px;
+                    padding-right: 40px;
+                }
+            }
+            .main .page-header {
+                margin-top: 0;
+            }
+            .placeholders {
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            .placeholders h4 {
+                margin-bottom: 0;
+            }
+            .placeholder {
+                margin-bottom: 20px;
+            }
+            .placeholder img {
+                border-radius: 50%;
+                display: inline-block;
+            }
+        </style>
+    </h:body>
+</html>

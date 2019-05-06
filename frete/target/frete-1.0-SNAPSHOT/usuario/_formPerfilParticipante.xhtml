@@ -1,0 +1,25 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <h:form id="formPerfil" acceptcharset="UTF-8">
+
+        <p:panelGrid 
+            id="pgPerfil"
+            columns="2" 
+            columnClasses="ui-grid-col-3, ui-grid-col-9" 
+            layout="grid" 
+            styleClass="ui-panelgrid-blank form-group">
+
+            <p:outputLabel value="Nome"/>
+            <p:inputText value="#{usuarioBean.participante.nome}" disabled="true"/>
+
+            <p:outputLabel value="CPF"/>
+            <p:inputMask mask="999.999.999-99"
+                         disabled="true"
+                         value="#{usuarioBean.participante.cpf}" />
+        </p:panelGrid>
+    </h:form>
+
+</ui:composition>
