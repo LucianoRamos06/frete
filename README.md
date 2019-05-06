@@ -24,6 +24,6 @@ O Usuário Transportadora deve cadastrar uma planilha e a mesma poderá ser usua
 
 O Usuário Participante não tem nenhume função especifica no sistema podendo unicamente fazer login e visualizar seus dados básicos.
 
-O usuário pode acessar o sistema de forma anônima, ou sejá sem login. Podendo com isso calcular o preço de um ou mais fretes.
+O usuário pode acessar o sistema de forma anônima, ou seja sem login. Podendo com isso calcular o preço de um ou mais fretes.
 
 
