@@ -6,7 +6,7 @@
 
 Para efetuar o deploy da aplicação é necessário inserir o jar do primefaces poseidon 1.0.0, o jar encontra-se no projeto. No pacote: br.com.frete.docs.
 
-Deve-se alterar o arquivo persistence.xml para inserir os configuraçõs do banco de dados.
+Deve-se alterar o arquivo persistence.xml para inserir as configuraçõs do banco de dados.
 
 Após essa configuração pode-se gerar o arquivo .war da aplicação.
 
