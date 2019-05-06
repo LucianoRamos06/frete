@@ -27,3 +27,8 @@ O Usuário Participante não tem nenhume função especifica no sistema podendo 
 O usuário pode acessar o sistema de forma anônima, ou seja sem login. Podendo com isso calcular o preço de um ou mais fretes.
 
 
+------------------------------------------------------------------------
+
+#Informações
+
+O sistema consome services dos correios para confirmação de endereço e do google para calcular a distância entre dois pontos.
